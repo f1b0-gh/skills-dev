@@ -1,0 +1,17 @@
+[package]
+name = "skills-dev-runtime-examples"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[workspace]
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+bumpalo = { version = "=3.20.4", default-features = false }
+tokio = { version = "=1.54.1", default-features = false, features = ["rt", "macros", "sync", "io-util", "time"] }
+
+[profile.dev]
+debug = 0

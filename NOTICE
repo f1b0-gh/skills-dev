@@ -1,0 +1,11 @@
+skills-dev
+Copyright 2026 skills-dev contributors
+
+This repository includes Rust guidance originally from leonardomso/rust-skills,
+Copyright (c) 2025 Leonardo Maldonado, licensed under MIT. Its original notice is
+preserved in skills/rust-skills/LICENSE.
+
+Local Rust reference improvements, extracted Rust discipline, ClickHouse guidance
+and repository additions are distributed under Apache License 2.0. See LICENSE,
+PROVENANCE.md and provenance/imports.json. Historical upstream hashes identify
+original sources and do not represent the current modified files.

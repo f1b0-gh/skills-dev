@@ -1,0 +1,3 @@
+interface:
+  display_name: "ClickHouse SQL"
+  short_description: "Design and audit exact ClickHouse SQL workloads"

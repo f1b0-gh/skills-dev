@@ -1,0 +1,22 @@
+name: Check skills
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    env:
+      RUSTUP_TOOLCHAIN: 1.99.1
+      SKILLS_DEV_NIGHTLY: nightly-2026-10-29
+      SKILLS_DEV_RUNTIME: "1"
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Structural checks
+        run: python3 scripts/validate.py
+      - name: Provision example toolchains
+        run: |
+          rustup toolchain install 1.99.1 --profile minimal
+          rustup toolchain install nightly-2026-10-29 --profile minimal
+          cargo fetch --locked --manifest-path tests/runtime/Cargo.toml
+      - name: Example and validator regressions
+        run: python3 -m unittest discover -s tests -v

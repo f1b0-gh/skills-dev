@@ -1,0 +1,3 @@
+interface:
+  display_name: "Rust reference"
+  short_description: "Focused Rust patterns and ownership guidance"

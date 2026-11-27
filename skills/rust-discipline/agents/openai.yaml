@@ -1,0 +1,3 @@
+interface:
+  display_name: "Rust discipline"
+  short_description: "Strict Rust production and review discipline"
