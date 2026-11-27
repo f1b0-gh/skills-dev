@@ -1126,6 +1126,7 @@
     "skills/clickhouse-sql/references/measurement.md",
     "skills/clickhouse-sql/references/physical-access.md",
     "skills/rust-discipline/SKILL.md",
+    "skills/rust-skills/LICENSE",
     "skills/rust-skills/SKILL.md",
     "skills/rust-skills/checks/validate.py",
     "skills/rust-skills/rules/anti-collect-intermediate.md",

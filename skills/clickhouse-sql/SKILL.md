@@ -1,7 +1,7 @@
 ---
 name: clickhouse-sql
 description: Use when writing, reviewing, debugging, or benchmarking ClickHouse SQL, including Altinity Antalya, generated detection/correlation queries, MergeTree access paths, and SQL over Iceberg.
-license: Apache-2.0
+license: MIT
 ---
 
 # ClickHouse SQL

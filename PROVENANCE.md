@@ -1,8 +1,8 @@
 # Provenance and licensing
 
-The repository's additions and extracted project guidance are licensed under
-Apache-2.0. Imported Rust reference material retains its original MIT license and
-copyright notice. Distribution must preserve both applicable notices.
+The skills, references and repository additions are licensed under MIT.
+Imported Rust reference material retains its upstream copyright notice, alongside
+the notice for local contributions.
 
 ## Rust reference
 
@@ -10,8 +10,8 @@ The reference originates in [leonardomso/rust-skills](https://github.com/leonard
 at revision `fd2a861ab0406a4ac536a55274d14ea6fd1ca9c9`. It was maintained in LO before
 this extraction; the portable copy in rsigma-antalya matched that source subset.
 
-- [LICENSE](skills/rust-skills/LICENSE) retains the original MIT notice.
-- [LICENSE-APACHE](skills/rust-skills/LICENSE-APACHE) covers local contributions.
+- [LICENSE](skills/rust-skills/LICENSE) covers the Rust reference and local
+  contributions under MIT, retaining the original upstream copyright notice.
 - [UPSTREAM.json](skills/rust-skills/UPSTREAM.json) records original upstream hashes,
   including files omitted from this portable package. It is historical import
   metadata, not a checksum manifest of the current edited tree.

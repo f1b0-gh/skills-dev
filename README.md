@@ -2,6 +2,7 @@
 
 Reusable development skills for Rust and ClickHouse, with focused references,
 explicit evidence requirements and checks for the examples corrected here.
+Licensed under [MIT](LICENSE).
 
 | Skill | Purpose |
 |---|---|

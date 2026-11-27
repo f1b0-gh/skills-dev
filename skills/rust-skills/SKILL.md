@@ -1,7 +1,7 @@
 ---
 name: rust-skills
 description: Use when choosing Rust ownership, error-handling, async, API, memory, or performance patterns during implementation, refactoring, or code review.
-license: MIT AND Apache-2.0
+license: MIT
 metadata:
   upstream-author: leonardomso
   upstream-version: "1.5.6"

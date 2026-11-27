@@ -1,7 +1,7 @@
 ---
 name: rust-discipline
 description: Use when implementing or reviewing Rust changes under strict production safety, typed-error, resource-ownership, and dependency constraints.
-license: Apache-2.0
+license: MIT
 ---
 
 # Rust discipline
