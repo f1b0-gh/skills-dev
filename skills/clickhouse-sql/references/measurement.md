@@ -44,6 +44,24 @@ complete end-to-end result. pySigma conversion time is not Elasticsearch executi
 time. Distinguish Elasticsearch ES|QL and Lucene routes, keyword versus wildcard
 mappings, and count-only versus full-result queries.
 
+### When completion requires a query-log record
+
+If the client polls for `QueryFinish`, measure wall time through confirmation and
+result handling. For each request, pair the data SELECT duration with the wait
+for its own terminal record by query ID. Keep individual client timings within
+each concurrent burst so a long wait on one lane stays visible. Compute throughput
+from completed requests and elapsed burst spans. Independent phase medians cannot
+reconstruct a median request.
+
+When testing `query_log.flush_interval_milliseconds`, count application polls
+and keep benchmark observer queries out of the log with query-scoped
+`log_queries=0`. Through a defined post-run drain, count query-log parts and
+on-disk output bytes separately for `NewPart` and completed `MergeParts` events.
+Report bytes per completed request and parts per elapsed second. Smaller initial
+parts can still cost more in merge output. Merges can include older parts, and
+late merges and device writes need separate observation under sustained load
+before choosing a deployment interval. [system.part_log](https://clickhouse.com/docs/reference/system-tables/part_log)
+
 ## Reproducible comparisons
 
 Use identical logical inputs and an independent result oracle. When outputs

@@ -35,8 +35,8 @@ replay identities or late-event behavior.
 
 | Situation | Read |
 |---|---|
-| Latency, CPU/faults, memory limits, pySigma/Elasticsearch comparison | [Measurement and runtime](references/measurement.md) |
-| Full scans, invisible indexes, timestamp guards, projections or Iceberg pruning | [Physical access](references/physical-access.md) |
+| Latency, query-log confirmation, CPU/faults, memory limits, pySigma/Elasticsearch comparison | [Measurement and runtime](references/measurement.md) |
+| Full scans, invisible indexes, timestamp guards, projections, Iceberg pruning or delete-read failures | [Physical access](references/physical-access.md) |
 | Numeric/time rewrites, warm-only failures, windows, shared scans or state reuse | [Correctness and correlation](references/correctness.md) |
 
 Use `EXPLAIN actions=1`, `EXPLAIN indexes=1` and `EXPLAIN PIPELINE` as appropriate
