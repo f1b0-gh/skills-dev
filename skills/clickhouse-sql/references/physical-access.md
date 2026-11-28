@@ -70,3 +70,18 @@ Keep the snapshot, schema/field bindings, deletes, source overlap/identity rules
 complete lookbacks and cache state explicit. A pinned snapshot establishes
 reproducibility, not complete coverage. Evaluate hot, cold and combined-source paths
 with identical logical output obligations before comparing latency.
+
+For a missing computed column in `ReadFromObjectStorage` with Iceberg v2 deletes,
+isolate equality deletes on a snapshot whose metadata confirms zero position
+deletes. Start with two rows matching the filter and equality-delete one of them.
+Check the surviving ID and the exact nonempty result of the computed query.
+Keep the original and position-only snapshots as controls when reducing a
+mixed-delete failure.
+
+Reduce the failing SQL to the computed column in both the projection and the
+filter. Try removing the grouping while keeping that expression. Run the failing
+SQL with default PREWHERE movement and again with only
+`SETTINGS optimize_move_to_prewhere=0` changed. Record the snapshot, build,
+missing expression and both outcomes.
+A correct result with PREWHERE movement disabled identifies a query-scoped
+workaround for that case. Measure its cost on the intended workload separately.
